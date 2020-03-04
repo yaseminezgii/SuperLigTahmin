@@ -11,14 +11,14 @@ html_icerigi = response.content
 
 soup = BeautifulSoup(html_icerigi,"html.parser")
 
-a= ['Galatasaray', 'Trabzonspor', 'Fenerbahçe', 'M.Başakşehir', 'DG Sivasspor','Göztepe','Beşiktaş', 'Aytemiz Alanyaspor']
-b = ['M.Başakşehir','Trabzonspor','DG Sivasspor', 'Galatasaray','Fenerbahçe', 'Aytemiz Alanyaspor','Beşiktaş','Göztepe']
-c= ['Fenerbahçe', 'Trabzonspor','M.Başakşehir','Galatasaray','Aytemiz Alanyaspor','DG Sivasspor','Göztepe','Beşiktaş']
-d=  ['Trabzonspor','M.Başakşehir','Galatasaray','Fenerbahçe','DG Sivasspor','Beşiktaş', 'Göztepe','Aytemiz Alanyaspor']
-e= ['Galatasaray', 'Trabzonspor', 'Fenerbahçe','Beşiktaş','DG Sivasspor','Aytemiz Alanyaspor','Göztepe','Gaziantep FK']
-f = ['Trabzonspor','M.Başakşehir','Galatasaray','Fenerbahçe','DG Sivasspor','Beşiktaş','Aytemiz Alanyaspor','Göztepe']
-k= ['Galatasaray','M.Başakşehir', 'Trabzonspor','Fenerbahçe','DG Sivasspor','Beşiktaş','Aytemiz Alanyaspor','Göztepe']
-m= ['Trabzonspor','Galatasaray','M.Başakşehir','Fenerbahçe','DG Sivasspor','Beşiktaş','Aytemiz Alanyaspor','Göztepe']
+Ahmet= ['Galatasaray', 'Trabzonspor', 'Fenerbahçe', 'M.Başakşehir', 'DG Sivasspor','Göztepe','Beşiktaş', 'Aytemiz Alanyaspor']
+Mehmet = ['M.Başakşehir','Trabzonspor','DG Sivasspor', 'Galatasaray','Fenerbahçe', 'Aytemiz Alanyaspor','Beşiktaş','Göztepe']
+Atakan= ['Fenerbahçe', 'Trabzonspor','M.Başakşehir','Galatasaray','Aytemiz Alanyaspor','DG Sivasspor','Göztepe','Beşiktaş']
+Murat=  ['Trabzonspor','M.Başakşehir','Galatasaray','Fenerbahçe','DG Sivasspor','Beşiktaş', 'Göztepe','Aytemiz Alanyaspor']
+Vedat= ['Galatasaray', 'Trabzonspor', 'Fenerbahçe','Beşiktaş','DG Sivasspor','Aytemiz Alanyaspor','Göztepe','Gaziantep FK']
+Yiğit = ['Trabzonspor','M.Başakşehir','Galatasaray','Fenerbahçe','DG Sivasspor','Beşiktaş','Aytemiz Alanyaspor','Göztepe']
+Oğuzhan= ['Galatasaray','M.Başakşehir', 'Trabzonspor','Fenerbahçe','DG Sivasspor','Beşiktaş','Aytemiz Alanyaspor','Göztepe']
+Cenk= ['Trabzonspor','Galatasaray','M.Başakşehir','Fenerbahçe','DG Sivasspor','Beşiktaş','Aytemiz Alanyaspor','Göztepe']
   
 teams = [team.text.strip() for team in soup.find_all("td", {"class":"team_link"})]
 #print('Güncel Puan Tablosu :' "\n", "\n", teams, "\n")
@@ -30,18 +30,18 @@ def main():
     count_2 = 0
     count_3=0
     totalpuan = count+count_2+count_3
-    if teams[:1] == a[:1]:
+    if teams[:1] == Ahmet[:1]:
         count+=2           
-    for x,y in enumerate(A):
-        if teams.index(y) - a.index(y)==0:
+    for x,y in enumerate(Ahmet):
+        if teams.index(y) - Ahmet.index(y)==0:
             count += 1     
-        if teams.index(y) !=a.index(y):            
-            a= a.index(y)-teams.index(y)
+        if teams.index(y) !=Ahmet.index(y):            
+            a= Ahmet.index(y)-teams.index(y)
             if a>0:
                 a*=-1
             count_2 += a                
     totalpuan = count+count_2+count_3
-    print ("a Toplam Puan:", totalpuan)
+    print ("Ahmet Toplam Puan:", totalpuan)
 main()
     
 def main():
@@ -51,18 +51,18 @@ def main():
     count_2 = 0
     count_3=0
     totalpuan = count+count_2+count_3
-    if teams[:1] == b[:1]:
+    if teams[:1] == Mehmet[:1]:
         count+=2           
-    for x,y in enumerate(b):
-        if teams.index(y) - b.index(y)==0:
+    for x,y in enumerate(Mehmet):
+        if teams.index(y) - Mehmet.index(y)==0:
             count += 1     
-        if teams.index(y) !=b.index(y):            
-            a= b.index(y)-teams.index(y)
+        if teams.index(y) !=Mehmet.index(y):            
+            a= Mehmet.index(y)-teams.index(y)
             if a>0:
                 a*=-1
             count_2 += a                
     totalpuan = count+count_2+count_3
-    print ("b Toplam Puan:", totalpuan)
+    print ("Mehmet Toplam Puan:", totalpuan)
 main()
     
 
@@ -73,18 +73,18 @@ def main():
     count_2 = 0
     count_3=0
     totalpuan = count+count_2+count_3
-    if teams[:1] == c[:1]:
+    if teams[:1] == Atakan[:1]:
         count+=2           
-    for x,y in enumerate(c):
-        if teams.index(y) - c.index(y)==0:
+    for x,y in enumerate(Atakan):
+        if teams.index(y) - Atakan.index(y)==0:
             count += 1     
-        if teams.index(y) !=c.index(y):            
-            a= c.index(y)-teams.index(y)
+        if teams.index(y) !=Atakan.index(y):            
+            a= Atakan.index(y)-teams.index(y)
             if a>0:
                 a*=-1
             count_2 += a                
     totalpuan = count+count_2+count_3
-    print ("c Toplam Puan:", totalpuan)
+    print ("Atakan Toplam Puan:", totalpuan)
 main()
 
 def main():
@@ -94,18 +94,18 @@ def main():
     count_2 = 0
     count_3=0
     totalpuan = count+count_2+count_3
-    if teams[:1] == d[:1]:
+    if teams[:1] == Murat[:1]:
         count+=2           
-    for x,y in enumerate(d):
-        if teams.index(y) - d.index(y)==0:
+    for x,y in enumerate(Okan):
+        if teams.index(y) - Murat.index(y)==0:
             count += 1     
-        if teams.index(y) !=d.index(y):            
-            a= d.index(y)-teams.index(y)
+        if teams.index(y) !=Murat.index(y):            
+            a= Murat.index(y)-teams.index(y)
             if a>0:
                 a*=-1
             count_2 += a                
     totalpuan = count+count_2+count_3
-    print ("d Toplam Puan:", totalpuan)
+    print ("Murat Toplam Puan:", totalpuan)
 main()
 
 def main():
@@ -115,18 +115,18 @@ def main():
     count_2 = 0
     count_3=0
     totalpuan = count+count_2+count_3
-    if teams[:1] == e[:1]:
+    if teams[:1] == Vedat[:1]:
         count+=2           
-    for x,y in enumerate(e):
-        if teams.index(y) - e.index(y)==0:
+    for x,y in enumerate(Vedat):
+        if teams.index(y) - Vedat.index(y)==0:
             count += 1     
-        if teams.index(y) !=e.index(y):            
-            a= e.index(y)-teams.index(y)
+        if teams.index(y) !=Vedat.index(y):            
+            a= Vedat.index(y)-teams.index(y)
             if a>0:
                 a*=-1
             count_2 += a                
     totalpuan = count+count_2+count_3
-    print ("e Toplam Puan:", totalpuan)
+    print ("Vedat Toplam Puan:", totalpuan)
 main()
 
 def main():
@@ -136,18 +136,18 @@ def main():
     count_2 = 0
     count_3=0
     totalpuan = count+count_2+count_3
-    if teams[:1] == f[:1]:
+    if teams[:1] == Yiğit[:1]:
         count+=2           
-    for x,y in enumerate(f):
-        if teams.index(y) - f.index(y)==0:
+    for x,y in enumerate(Yiğit):
+        if teams.index(y) - Yiğit.index(y)==0:
             count += 1     
-        if teams.index(y) !=f.index(y):            
-            a= f.index(y)-teams.index(y)
+        if teams.index(y) !=Yiğit.index(y):            
+            a= Yiğit.index(y)-teams.index(y)
             if a>0:
                 a*=-1
             count_2 += a                
     totalpuan = count+count_2+count_3
-    print ("f Toplam Puan:", totalpuan)
+    print ("Yiğit Toplam Puan:", totalpuan)
 main()
 
 def main():
@@ -157,18 +157,18 @@ def main():
     count_2 = 0
     count_3=0
     totalpuan = count+count_2+count_3
-    if teams[:1] == k[:1]:
+    if teams[:1] == Oğuzhan[:1]:
         count+=2           
-    for x,y in enumerate(k):
-        if teams.index(y) - k.index(y)==0:
+    for x,y in enumerate(Oğuzhan):
+        if teams.index(y) - Oğuzhan.index(y)==0:
             count += 1     
-        if teams.index(y) !=k.index(y):            
-            a= k.index(y)-teams.index(y)
+        if teams.index(y) !=Oğuzhan.index(y):            
+            a= Oğuzhan.index(y)-teams.index(y)
             if a>0:
                 a*=-1
             count_2 += a                
     totalpuan = count+count_2+count_3
-    print ("k Toplam Puan:", totalpuan)
+    print ("Oğuzhan Toplam Puan:", totalpuan)
 main()
 
 def main():
@@ -178,16 +178,16 @@ def main():
     count_2 = 0
     count_3=0
     totalpuan = count+count_2+count_3
-    if teams[:1] == m[:1]:
+    if teams[:1] == Cenk[:1]:
         count+=2           
-    for x,y in enumerate(m):
-        if teams.index(y) - m.index(y)==0:
+    for x,y in enumerate(Cenk):
+        if teams.index(y) - Cenk.index(y)==0:
             count += 1     
-        if teams.index(y) !=m.index(y):            
-            a= m.index(y)-teams.index(y)
+        if teams.index(y) !=Cenk.index(y):            
+            a= Cenk.index(y)-teams.index(y)
             if a>0:
                 a*=-1
             count_2 += a                
     totalpuan = count+count_2+count_3
-    print ("m Toplam Puan:", totalpuan)
+    print ("Cenk Toplam Puan:", totalpuan)
 main()
