@@ -23,171 +23,25 @@ Cenk= ['Trabzonspor','Galatasaray','M.Başakşehir','Fenerbahçe','DG Sivasspor'
 teams = [team.text.strip() for team in soup.find_all("td", {"class":"team_link"})]
 #print('Güncel Puan Tablosu :' "\n", "\n", teams, "\n")
 
-def main():
-    correct = []
-    incorrect = []
-    count = 0
-    count_2 = 0
-    count_3=0
-    totalpuan = count+count_2+count_3
-    if teams[:1] == Ahmet[:1]:
-        count+=2           
-    for x,y in enumerate(Ahmet):
-        if teams.index(y) - Ahmet.index(y)==0:
-            count += 1     
-        if teams.index(y) !=Ahmet.index(y):            
-            a= Ahmet.index(y)-teams.index(y)
-            if a>0:
-                a*=-1
-            count_2 += a                
-    totalpuan = count+count_2+count_3
-    print ("Ahmet Toplam Puan:", totalpuan)
-main()
+def main(players):
     
-def main():
-    correct = []
-    incorrect = []
-    count = 0
-    count_2 = 0
-    count_3=0
-    totalpuan = count+count_2+count_3
-    if teams[:1] == Mehmet[:1]:
-        count+=2           
-    for x,y in enumerate(Mehmet):
-        if teams.index(y) - Mehmet.index(y)==0:
-            count += 1     
-        if teams.index(y) !=Mehmet.index(y):            
-            a= Mehmet.index(y)-teams.index(y)
-            if a>0:
-                a*=-1
-            count_2 += a                
-    totalpuan = count+count_2+count_3
-    print ("Mehmet Toplam Puan:", totalpuan)
-main()
-    
+    for player, p_teams in players.items(): # loop over each player and answers
+        # e.g.
+        # player = Ahmet
+        # p_teams = ['Galatasaray', 'Trabzonspor', ...]
+        count = 0
+        count_2 = 0
+        if teams[:1] == p_teams[:1]:
+            count+=2           
+        for x,y in enumerate(p_teams):
+            if teams.index(y) - p_teams.index(y)==0:
+                count += 1     
+            if teams.index(y) != p_teams.index(y):            
+                a = p_teams.index(y)-teams.index(y)
+                if a>0:
+                    a*=-1
+                count_2 += a                
+        totalpuan = count+count_2
+        print (player, "Toplam Puan:", totalpuan)
 
-def main():
-    correct = []
-    incorrect = []
-    count = 0
-    count_2 = 0
-    count_3=0
-    totalpuan = count+count_2+count_3
-    if teams[:1] == Atakan[:1]:
-        count+=2           
-    for x,y in enumerate(Atakan):
-        if teams.index(y) - Atakan.index(y)==0:
-            count += 1     
-        if teams.index(y) !=Atakan.index(y):            
-            a= Atakan.index(y)-teams.index(y)
-            if a>0:
-                a*=-1
-            count_2 += a                
-    totalpuan = count+count_2+count_3
-    print ("Atakan Toplam Puan:", totalpuan)
-main()
-
-def main():
-    correct = []
-    incorrect = []
-    count = 0
-    count_2 = 0
-    count_3=0
-    totalpuan = count+count_2+count_3
-    if teams[:1] == Murat[:1]:
-        count+=2           
-    for x,y in enumerate(Okan):
-        if teams.index(y) - Murat.index(y)==0:
-            count += 1     
-        if teams.index(y) !=Murat.index(y):            
-            a= Murat.index(y)-teams.index(y)
-            if a>0:
-                a*=-1
-            count_2 += a                
-    totalpuan = count+count_2+count_3
-    print ("Murat Toplam Puan:", totalpuan)
-main()
-
-def main():
-    correct = []
-    incorrect = []
-    count = 0
-    count_2 = 0
-    count_3=0
-    totalpuan = count+count_2+count_3
-    if teams[:1] == Vedat[:1]:
-        count+=2           
-    for x,y in enumerate(Vedat):
-        if teams.index(y) - Vedat.index(y)==0:
-            count += 1     
-        if teams.index(y) !=Vedat.index(y):            
-            a= Vedat.index(y)-teams.index(y)
-            if a>0:
-                a*=-1
-            count_2 += a                
-    totalpuan = count+count_2+count_3
-    print ("Vedat Toplam Puan:", totalpuan)
-main()
-
-def main():
-    correct = []
-    incorrect = []
-    count = 0
-    count_2 = 0
-    count_3=0
-    totalpuan = count+count_2+count_3
-    if teams[:1] == Yiğit[:1]:
-        count+=2           
-    for x,y in enumerate(Yiğit):
-        if teams.index(y) - Yiğit.index(y)==0:
-            count += 1     
-        if teams.index(y) !=Yiğit.index(y):            
-            a= Yiğit.index(y)-teams.index(y)
-            if a>0:
-                a*=-1
-            count_2 += a                
-    totalpuan = count+count_2+count_3
-    print ("Yiğit Toplam Puan:", totalpuan)
-main()
-
-def main():
-    correct = []
-    incorrect = []
-    count = 0
-    count_2 = 0
-    count_3=0
-    totalpuan = count+count_2+count_3
-    if teams[:1] == Oğuzhan[:1]:
-        count+=2           
-    for x,y in enumerate(Oğuzhan):
-        if teams.index(y) - Oğuzhan.index(y)==0:
-            count += 1     
-        if teams.index(y) !=Oğuzhan.index(y):            
-            a= Oğuzhan.index(y)-teams.index(y)
-            if a>0:
-                a*=-1
-            count_2 += a                
-    totalpuan = count+count_2+count_3
-    print ("Oğuzhan Toplam Puan:", totalpuan)
-main()
-
-def main():
-    correct = []
-    incorrect = []
-    count = 0
-    count_2 = 0
-    count_3=0
-    totalpuan = count+count_2+count_3
-    if teams[:1] == Cenk[:1]:
-        count+=2           
-    for x,y in enumerate(Cenk):
-        if teams.index(y) - Cenk.index(y)==0:
-            count += 1     
-        if teams.index(y) !=Cenk.index(y):            
-            a= Cenk.index(y)-teams.index(y)
-            if a>0:
-                a*=-1
-            count_2 += a                
-    totalpuan = count+count_2+count_3
-    print ("Cenk Toplam Puan:", totalpuan)
-main()
+main(players)  # pass dictionary to function
