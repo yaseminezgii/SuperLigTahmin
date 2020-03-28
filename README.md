@@ -5,6 +5,4 @@ iii) Bir takımın sıralamadaki yerini bilemeyen ise aradaki fark kadar eksi pu
 iv) En fazla puanı alan veya alanlar; veya en az ekside olan veya olanlar kazanır. (Anyone with the highest score or those who are at least negative will win. )
 
 Python ile ilk deneme :)
-İçerikteki hesaplama için daha kısa bir yol varsa iletebilirsiniz. 
 
-Zamanla içerik daha da güncellenecektir.
