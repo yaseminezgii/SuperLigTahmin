@@ -11,14 +11,16 @@ html_icerigi = response.content
 
 soup = BeautifulSoup(html_icerigi,"html.parser")
 
-Ahmet= ['Galatasaray', 'Trabzonspor', 'Fenerbahçe', 'M.Başakşehir', 'DG Sivasspor','Göztepe','Beşiktaş', 'Aytemiz Alanyaspor']
-Mehmet = ['M.Başakşehir','Trabzonspor','DG Sivasspor', 'Galatasaray','Fenerbahçe', 'Aytemiz Alanyaspor','Beşiktaş','Göztepe']
-Atakan= ['Fenerbahçe', 'Trabzonspor','M.Başakşehir','Galatasaray','Aytemiz Alanyaspor','DG Sivasspor','Göztepe','Beşiktaş']
-Murat=  ['Trabzonspor','M.Başakşehir','Galatasaray','Fenerbahçe','DG Sivasspor','Beşiktaş', 'Göztepe','Aytemiz Alanyaspor']
-Vedat= ['Galatasaray', 'Trabzonspor', 'Fenerbahçe','Beşiktaş','DG Sivasspor','Aytemiz Alanyaspor','Göztepe','Gaziantep FK']
-Yiğit = ['Trabzonspor','M.Başakşehir','Galatasaray','Fenerbahçe','DG Sivasspor','Beşiktaş','Aytemiz Alanyaspor','Göztepe']
-Oğuzhan= ['Galatasaray','M.Başakşehir', 'Trabzonspor','Fenerbahçe','DG Sivasspor','Beşiktaş','Aytemiz Alanyaspor','Göztepe']
-Cenk= ['Trabzonspor','Galatasaray','M.Başakşehir','Fenerbahçe','DG Sivasspor','Beşiktaş','Aytemiz Alanyaspor','Göztepe']
+players={
+"Ahmet": ['Galatasaray', 'Trabzonspor', 'Fenerbahçe', 'M.Başakşehir', 'DG Sivasspor','Göztepe','Beşiktaş', 'Aytemiz Alanyaspor'],
+"Mehmet" : ['M.Başakşehir','Trabzonspor','DG Sivasspor', 'Galatasaray','Fenerbahçe', 'Aytemiz Alanyaspor','Beşiktaş','Göztepe'],
+"Atakan": ['Fenerbahçe', 'Trabzonspor','M.Başakşehir','Galatasaray','Aytemiz Alanyaspor','DG Sivasspor','Göztepe','Beşiktaş'],
+"Murat":  ['Trabzonspor','M.Başakşehir','Galatasaray','Fenerbahçe','DG Sivasspor','Beşiktaş', 'Göztepe','Aytemiz Alanyaspor'],
+"Vedat": ['Galatasaray', 'Trabzonspor', 'Fenerbahçe','Beşiktaş','DG Sivasspor','Aytemiz Alanyaspor','Göztepe','Gaziantep FK'],
+"Yiğit" : ['Trabzonspor','M.Başakşehir','Galatasaray','Fenerbahçe','DG Sivasspor','Beşiktaş','Aytemiz Alanyaspor','Göztepe'],
+"Oğuzhan": ['Galatasaray','M.Başakşehir', 'Trabzonspor','Fenerbahçe','DG Sivasspor','Beşiktaş','Aytemiz Alanyaspor','Göztepe'],
+"Cenk": ['Trabzonspor','Galatasaray','M.Başakşehir','Fenerbahçe','DG Sivasspor','Beşiktaş','Aytemiz Alanyaspor','Göztepe']
+}
   
 teams = [team.text.strip() for team in soup.find_all("td", {"class":"team_link"})]
 #print('Güncel Puan Tablosu :' "\n", "\n", teams, "\n")
