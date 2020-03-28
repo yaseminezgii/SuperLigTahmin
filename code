@@ -1,3 +1,8 @@
+pip install pyfiglet
+import pyfiglet
+result = pyfiglet.figlet_format("Puan Durumu") 
+print(result) 
+
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
