@@ -7,7 +7,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 import numpy as np
 
-url = "https://tr.beinsports.com/lig/super-lig/puan-durumu"
+url = "https://www.sporx.com/futbol-superlig"
 
 response = requests.get(url)
 
@@ -16,18 +16,19 @@ html_icerigi = response.content
 soup = BeautifulSoup(html_icerigi,"html.parser")
 
 players={
-"Player1": ['Galatasaray', 'Trabzonspor', 'Fenerbahçe', 'M.Başakşehir', 'DG Sivasspor','Göztepe','Beşiktaş', 'Aytemiz Alanyaspor'],
-"Player2" : ['M.Başakşehir','Trabzonspor','DG Sivasspor', 'Galatasaray','Fenerbahçe', 'Aytemiz Alanyaspor','Beşiktaş','Göztepe'],
-"Player3": ['Fenerbahçe', 'Trabzonspor','M.Başakşehir','Galatasaray','Aytemiz Alanyaspor','DG Sivasspor','Göztepe','Beşiktaş'],
-"Player4":  ['Trabzonspor','M.Başakşehir','Galatasaray','Fenerbahçe','DG Sivasspor','Beşiktaş', 'Göztepe','Aytemiz Alanyaspor'],
-"Player5": ['Galatasaray', 'Trabzonspor', 'Fenerbahçe','Beşiktaş','DG Sivasspor','Aytemiz Alanyaspor','Göztepe','Gaziantep FK'],
-"Player6" : ['Trabzonspor','M.Başakşehir','Galatasaray','Fenerbahçe','DG Sivasspor','Beşiktaş','Aytemiz Alanyaspor','Göztepe'],
-"Player7": ['Galatasaray','M.Başakşehir', 'Trabzonspor','Fenerbahçe','DG Sivasspor','Beşiktaş','Aytemiz Alanyaspor','Göztepe'],
-"Player8": ['Trabzonspor','Galatasaray','M.Başakşehir','Fenerbahçe','DG Sivasspor','Beşiktaş','Aytemiz Alanyaspor','Göztepe']
+"Player1": ['Galatasaray', 'Trabzonspor', 'Fenerbahçe', 'Başakşehir', 'Sivasspor','Göztepe','Beşiktaş', 'Alanyaspor'],
+"Player2" : ['Başakşehir','Trabzonspor','Sivasspor', 'Galatasaray','Fenerbahçe', 'Alanyaspor','Beşiktaş','Göztepe'],
+"Player3": ['Fenerbahçe', 'Trabzonspor','Başakşehir','Galatasaray','Alanyaspor','Sivasspor','Göztepe','Beşiktaş'],
+"Player4":  ['Trabzonspor','Başakşehir','Galatasaray','Fenerbahçe','Sivasspor','Beşiktaş', 'Göztepe','Alanyaspor'],
+"Player5": ['Galatasaray', 'Trabzonspor', 'Fenerbahçe','Beşiktaş','Sivasspor','Alanyaspor','Göztepe','Gaziantep FK'],
+"Player6" : ['Trabzonspor','Başakşehir','Galatasaray','Fenerbahçe','Sivasspor','Beşiktaş','Alanyaspor','Göztepe'],
+"Player7": ['Galatasaray','Başakşehir', 'Trabzonspor','Fenerbahçe','Sivasspor','Beşiktaş','Alanyaspor','Göztepe'],
+"Player8": ['Trabzonspor','Galatasaray','Başakşehir','Fenerbahçe','Sivasspor','Beşiktaş','Alanyaspor','Göztepe']
 }
   
-teams = [team.text.strip() for team in soup.find_all("td", {"class":"team_link"})]
-#print('Güncel Puan Tablosu :' "\n", "\n", teams, "\n")
+teams = [team.text.strip() for team in soup.find_all("td", {"class":"td-team"})]
+print('Güncel Puan Tablosu :' "\n", "\n", teams, "\n")
+
 
 def main(players):
     
